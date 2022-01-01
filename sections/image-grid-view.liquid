@@ -1,0 +1,444 @@
+<section class="image-grid-view">
+  <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
+    <div class="row mob-none">
+      <div class="col-md-8 sl-image">
+		<!-- slider -->
+        <div class="igv-slider">
+          {% for block in section.blocks %}
+          	{% if block.type == 'image' %}
+              <div class="item item-single">
+                {% if block.settings.image != blank %}
+                {%- assign preview_img = block.settings.image -%}
+
+                <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
+                  <img data-srcset="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                </a>
+
+                {% else %}
+
+                <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
+                  <div class="not_img">
+                    186 x 74px
+                  </div>
+                </a>
+
+                {% endif %}
+              </div>
+          	{% endif %}
+          {% endfor %}
+        </div>
+        <!-- End slider -->
+      </div>
+      <div class="col-md-4 ml-image">
+        <div class="row">
+		  <div class="col-md-12 ml-full-img">
+            <!-- slider -->
+			<div class="igv-sub-slider">
+              {% for block in section.blocks %}
+          		{% if block.type == 'subslider' %}
+                  <div class="item item-single">
+                    {% if block.settings.image_ss2 != blank %}
+                    {%- assign preview_img_ss2 = block.settings.image_ss2 -%}
+
+                    <a title="{{ block.settings.title_ss2 }}" href="{{ block.settings.link_ss2 }}">
+                      <img data-srcset="{{ block.settings.image_ss2 | img_url : 'master' }}" alt="{{ block.settings.image_ss2.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                    </a>
+
+                    {% else %}
+
+                    <a title="{{ block.settings.title_ss2 }}" href="{{ block.settings.link_ss2 }}">
+                      <div class="not_img">
+                        186 x 74px
+                      </div>
+                    </a>
+
+                    {% endif %}
+                  </div>
+              	{% endif %}
+              {% endfor %}
+            </div>
+            <!-- End slider -->
+          </div>
+          <div class="col-md-6 col-6 ml-half-image">
+			<div class="img-box">
+              {% if section.settings.image3 != blank %}
+              {%- assign preview_img_3 = section.settings.image3 -%}
+              <a class="animate-scale adaptive_height" href="{{ section.settings.link3 }}" style="padding-top: {{ 1 | divided_by: preview_img_3.aspect_ratio | times: 100 }}%">
+                {%- assign img_url_3 = section.settings.image3 | img_url: 'master' -%}
+                <img data-srcset="{{ img_url_3 }}" alt="{{ section.settings.image3.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+              </a>
+              {% else %}
+              <a class="animate-scale" href="{{ section.settings.link3 }}">
+                <div class="not_img">
+                  370 x 200px
+                </div>   
+              </a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-md-6 col-6 ml-half-image">
+			<div class="img-box">
+              {% if section.settings.image4 != blank %}
+              {%- assign preview_img_4 = section.settings.image4 -%}
+              <a class="animate-scale adaptive_height" href="{{ section.settings.link4 }}" style="padding-top: {{ 1 | divided_by: preview_img_4.aspect_ratio | times: 100 }}%">
+                {%- assign img_url_4 = section.settings.image4 | img_url: 'master' -%}
+                <img data-srcset="{{ img_url_4 }}" alt="{{ section.settings.image4.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+              </a>
+              {% else %}
+              <a class="animate-scale" href="{{ section.settings.link4 }}">
+                <div class="not_img">
+                  370 x 200px
+                </div>   
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="img-box-mob">
+    	<div class="row">
+          <div class="col-12 slmob-image">
+            <!-- slider -->
+            <div class="igv-slider">
+              {% for block in section.blocks %}
+                {% if block.type == 'image' %}
+                  <div class="item item-single">
+                    {% if block.settings.image_mobile != blank %}
+                    {%- assign preview_img = block.settings.image_mobile -%}
+
+                    <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
+                      <img data-srcset="{{ block.settings.image_mobile | img_url : 'master' }}" alt="{{ block.settings.image_mobile.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                    </a>
+
+                    {% else %}
+
+                    <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
+                      <div class="not_img">
+                        186 x 74px
+                      </div>
+                    </a>
+
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+           <!-- End slider -->
+           <!-- slider -->
+			<div class="igv-sub-slider">
+              {% for block in section.blocks %}
+          		{% if block.type == 'subslider' %}
+                  <div class="item item-single">
+                    {% if block.settings.image_ss2_mobile != blank %}
+                    {%- assign preview_img_ss_mob_1 = block.settings.image_ss2_mobile -%}
+
+                    <a title="{{ block.settings.title_ss2 }}" href="{{ block.settings.link_ss2 }}">
+                      <img data-srcset="{{ block.settings.image_ss2_mobile | img_url : 'master' }}" alt="{{ block.settings.image_ss2_mobile.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                    </a>
+
+                    {% else %}
+
+                    <a title="{{ block.settings.title_ss2 }}" href="{{ block.settings.link_ss2 }}">
+                      <div class="not_img">
+                        186 x 74px
+                      </div>
+                    </a>
+
+                    {% endif %}
+                  </div>
+              	{% endif %}
+              {% endfor %}
+            </div>
+            <!-- End slider -->
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $( document ).ready(function() {
+    $('.igv-slider').slick({
+    	autoplay: true,
+      	autoplaySpeed: 2000,
+      	dots: false,
+        prevArrow: '<button type="button" class="slick-prev"> <i class="fa fa-angle-left"></i> </button>',
+        nextArrow: '<button type="button" class="slick-next"> <i class="fa fa-angle-right"></i> </button>'
+    });
+  });
+
+  $( document ).ready(function() {
+    $('.igv-sub-slider').slick({
+    	autoplay: true,
+      	autoplaySpeed: 2000,
+      	dots: false,
+        prevArrow: '<button type="button" class="slick-prev"> <i class="fa fa-angle-left"></i> </button>',
+        nextArrow: '<button type="button" class="slick-next"> <i class="fa fa-angle-right"></i> </button>'});
+  });
+</script>
+
+<style>
+  div#shopify-section-163672165704d0da5e {
+    margin-bottom: 30px;
+  }
+  .image-grid-view {
+    margin-top: 1rem;
+  }
+  .image-grid-view .row {
+    margin-right: -4px;
+    margin-left: -4px;
+  }
+  .image-grid-view .row .col-md-6,
+  .image-grid-view .row .col-md-4,
+  .image-grid-view .row .col-md-8,
+  .image-grid-view .row .col-md-12{
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  .igv-sub-slider .item img {
+    width: 100%;
+  }	
+  
+  .igv-sub-slider .slick-prev.slick-arrow,
+  .igv-slider .slick-prev.slick-arrow{
+      left: 5px;
+      background-color: rgba(0,0,0,0.0);
+      border: none;
+      color: #fff;
+      border-radius: 40px;
+      width: 30px;
+  }
+  .igv-sub-slider .slick-next.slick-arrow,
+  .igv-slider .slick-next.slick-arrow{
+  	  right: 5px;
+      background-color: rgba(0,0,0,0.0);
+      border: none;
+      color: #fff;
+      border-radius: 40px;
+      width: 30px;
+  }
+  .igv-sub-slider .slick-prev.slick-arrow:hover,
+  .igv-sub-slider .slick-next.slick-arrow:hover,
+  .igv-slider .slick-prev.slick-arrow:hover,
+  .igv-slider .slick-next.slick-arrow:hover{
+  	 background-color: rgba(0,0,0,0.3);
+  }
+  
+@media (min-width:768px){
+  .image-grid-view .row > .col-md-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 64%;
+    flex: 0 0 64%;
+    max-width: 64%;
+  }
+  .image-grid-view .row > .col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 36%;
+    flex: 0 0 36%;
+    max-width: 36%;
+  }  
+}
+  
+.image-grid-view .row .col-md-12.ml-full-img .img-box {
+	margin-bottom: 8px;
+}
+  
+@media (min-width:768px){
+  .img-box-mob{
+    display:none;
+  }
+  
+  /* Sub slider */
+  .igv-sub-slider.slick-slider {
+    margin-bottom: 8px;
+  }
+  
+  /* left main slider */
+  .igv-slider.slick-slider {
+    height: 100%;
+  }
+  .igv-slider.slick-slider .slick-list,
+  .igv-slider.slick-slider .slick-track,
+  .igv-slider.slick-slider div.item{
+  	height: 100%;
+  }
+  .igv-slider.slick-slider div.item a{
+  	display:block;
+    height: 100%;
+  }
+  .igv-slider.slick-slider img {
+    object-fit: cover;
+    object-position: left center;
+    width: 100%;
+	height: 100%;
+  }
+}
+@media (max-width:767px){
+  div#shopify-section-163672165704d0da5e {
+    margin-bottom: 10px;
+  }
+  .image-grid-view .img-box{
+    margin-bottom: 8px;
+  }
+  .row.mob-none{
+    display:none;
+  }
+  .image-grid-view .img-box-mob .row {
+    flex-wrap: nowrap;
+  }
+  .image-grid-view .row .slmob-image {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .image-grid-view .row .slmob-image {
+    flex: 0 0 auto;
+    max-width: unset;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .igv-slider {
+    flex: 0 0 67.3%;
+    max-width: 67.3%;
+    padding-right: 5px;
+  }
+  .igv-sub-slider {
+    flex: 0 0 32.7%;
+    max-width: 32.7%;
+    padding-left: 5px;
+  }
+  .image-grid-view .row .slmob-image .img-box:first-child {
+      padding-right: 5px;
+  }
+  .image-grid-view .row .slmob-image .img-box:last-child{
+  	padding-left: 5px;
+  }
+}  
+
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Image Grid Masonary",
+    "settings": [
+		{
+          "type": "select",
+          "id": "layout",
+          "label": "Sub Banner Layout:",
+          "options": [
+            {
+              "value": "default",
+              "label": "Default"
+            },
+            {
+              "value": "full",
+              "label": "Full Width"
+            }
+          ],
+          "default": "default"
+        },
+		{
+          "type": "header",
+          "content": "Third Image"
+        },
+		{
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link",
+          "info": "Optional"
+        },
+		{
+          "type": "header",
+          "content": "Fourth Image"
+        },
+		{
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Link",
+          "info": "Optional"
+        }
+	],
+	"blocks": [
+      {
+        "type": "image",
+        "name": "Image Slider 1",
+        "settings": [		  	
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },	  	
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image for Mobile"
+          },
+          {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "Editor’s Pick"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "Optional"
+          }
+        ]
+      },
+	  {
+        "type": "subslider",
+        "name": "Image Slider 2",
+        "settings": [		  	
+          {
+            "type": "image_picker",
+            "id": "image_ss2",
+            "label": "Image"
+          },	  	
+          {
+            "type": "image_picker",
+            "id": "image_ss2_mobile",
+            "label": "Image for Mobile"
+          },
+          {
+            "type" : "text",
+            "id" : "title_ss2",
+            "label" : "Title",
+            "default" : "Editor’s Pick"
+          },
+          {
+            "type": "url",
+            "id": "link_ss2",
+            "label": "Link",
+            "info": "Optional"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Grid View",
+        "category": "Block Images"
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+{% javascript %}
+{% endjavascript %}

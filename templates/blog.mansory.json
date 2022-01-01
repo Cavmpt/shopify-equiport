@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "blog_post": "5",
+        "blog_text_align": "left",
+        "blog_show_author": true,
+        "blog_show_date": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

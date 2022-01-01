@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "67ab6d61-42d0-43e4-9cd8-4ff611273e6f": {
+          "type": "sidebar_blog",
+          "settings": {
+            "display_sidebar_blog_page": false,
+            "show_sidebar": "left",
+            "display_sidebar_link": false,
+            "sidebar_link_title": "Categories",
+            "style_categories": "style_little",
+            "link_list": "main-menu",
+            "sidebar_recent_art": false,
+            "sidebar_blog_tags": false,
+            "enable_product": false,
+            "title_product": "Featured Products",
+            "collection": "cosmetic-all",
+            "limit": "3",
+            "enable_img_1": false,
+            "link_img_1": "shopify:\/\/collections\/cosmopolitan",
+            "enable_img_2": false,
+            "link_img_2": "shopify:\/\/collections\/cosmopolis",
+            "enable_custom_block": false,
+            "title_custom_block": "Custom Block",
+            "quote_custom_block": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "67ab6d61-42d0-43e4-9cd8-4ff611273e6f"
+      ],
+      "settings": {
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "dpl_lookbook_description": false,
+        "quote_title": "Sample Block Quote",
+        "quote_des": "Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo loremous convallis vitae interdum non nisl. Maecenas ac est sit amet augue pharetra convallis nec danos.",
+        "quote_title_2": "Sample Paragraph Text",
+        "quote_des_2": "<p>\nPraesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue pharetra convallis nec danos dui.\n<\/p>\n<p>\nCras suscipit quam et turpis eleifend vitae malesuada magna congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elitos. Pellentesque nulla eros accumsan quis justo at tincidunt lobortis denimes loremous. Suspendisse vestibulum lectus in lectus volutpat, ut dapibus purus pulvinar. Vestibulum sit amet auctor ipsum.\n<\/p>",
+        "dpl_gallery_lookbook": false,
+        "gallery_lb_title": "LookBook Gallery",
+        "show_cart_best_sellers_product": false,
+        "title": "Best Sellers",
+        "show_slider_featured_collection": "cosmopolis",
+        "slider_featured_limit_all": 8,
+        "collection_results_per_row1": "4"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

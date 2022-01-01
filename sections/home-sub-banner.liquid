@@ -1,0 +1,282 @@
+{% if section.settings.display_sub_banner and section.blocks.size > 0 %}
+<div class="home-sub-banner sub-banner-{{ section.blocks.size }}{% unless section.settings.display_padding %} no-padding{% endunless %}" id="sub-banner-{{section.id}}">
+    <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
+      
+        {% if section.settings.brand_title != blank or section.settings.brands_view_all != blank %}
+        <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}{% if section.settings.title_style == 'style_3' %} style_3{% endif %}">
+          <h3 class="box-title">
+            <span class="title">
+              {% render 'multilang' with section.settings.brand_title %}
+            </span>
+          </h3>
+        </div>
+        {% endif %}
+      
+        <div class="row">
+            {% for block in section.blocks %}
+            
+            {% case section.blocks.size %}
+                {% when 1 %}
+                {%- assign column_size = 'col-12 one-block' -%}
+                {% when 2 %}
+                {%- assign column_size = 'col-12 col-sm-6 two-blocks' -%}
+                {% when 3 %}
+                    {%- assign column_size = 'col-6 col-sm-4 three-blocks' -%}
+                {% when 4 %}
+                    {%- assign column_size = 'col-6 four-blocks' -%}
+                {% when 5 %}
+                    {%- assign column_size = 'col-6 col-md-4 five-blocks' -%}
+                {% when 6 %}
+                    {%- assign column_size = 'col-6 col-md-4 six-blocks' -%}
+            {% endcase %}
+                
+            <div class="item {{ column_size }}">
+                <div class="sub-banner banner-item">
+                    <div class="img-box">
+                        {% if block.settings.image != blank %}
+                            {%- assign preview_img = block.settings.image -%}
+                            <a class="animate-scale adaptive_height" href="{{ block.settings.link }}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                                {%- assign img_url = block.settings.image | img_url: 'master' -%}
+                                <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                            </a>
+                        {% else %}
+                            <a class="animate-scale" href="{{ block.settings.link }}">
+                                <div class="not_img">
+                                370 x 200px
+                                </div>   
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    {% if block.settings.title != blank %}
+                    <div class="content-box">
+                      <div class="content-link-box">
+                        <h3 class="banner-title" style="{% if block.settings.color_title != blank %}color: {{ block.settings.color_title }};{% endif %}">
+                            {% render 'multilang' with block.settings.title %}                             
+                            <span class="border-bt-hover" style="{% if block.settings.color_title != blank %}background-color: {{ block.settings.color_title }};{% endif %}"></span>
+                        </h3>
+                          <div class="banner-link">
+                               <a class="banner-title-link" href="{{ block.settings.link }}" style="{% if block.settings.color_title != blank %}color: {{ block.settings.color_title }};{% endif %}"> <span>{{ block.settings.title-link-title }}</span> <i>{% render 'icon-rightangle' %}</i> </a>
+                          </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    {% assign font_size_title =  section.settings.font_size_title %}
+    {% assign margin_bottom =  section.settings.margin_bottom %}
+
+    @media (max-width: 767px) {
+        #sub-banner-{{section.id}} {
+            margin-bottom: {{ section.settings.margin_bottom_mb }}px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        #sub-banner-{{section.id}} {
+            margin-bottom: {{ section.settings.margin_bottom_tab }}px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        #sub-banner-{{section.id}} .banner-title {
+            font-size: {{ font_size_title }};
+        }
+        
+        #sub-banner-{{section.id}} {
+            margin-bottom: {{ margin_bottom }}px;
+        }
+    }	
+
+  .banner-item .content-box {
+    top: unset;
+    left: 50%;
+    -moz-transform: translate(-50%,0%);
+    -o-transform: translate(-50%,0%);
+    -ms-transform: translate(-50%,0%);
+    -webkit-transform: translate(-50%,0%);
+    transform: translate(-50%,0%);
+    bottom: 5%;
+  }
+  .banner-link {
+      display: block;
+      margin-top: 4px;
+  }
+  .banner-title-link {
+      display: inline-flex;
+      align-items: center;
+  }
+  .banner-title-link span {
+      line-height: normal;
+      font-size: 14px;
+  }
+  .banner-title-link > i {
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+      position: relative;
+      top: 2px;
+  }
+  
+</style>
+{% endif %}
+
+
+{% schema %}
+    {
+        "name": "Sub Banner",
+        "class": "home-sub-banner-sections",
+        "max_blocks": 6,
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "display_sub_banner",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "select",
+                "id": "layout",
+                "label": "Sub Banner Layout:",
+                "options": [
+                    {
+                        "value": "default",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "full",
+                        "label": "Full Width"
+                    }
+                ],
+                "default": "default"
+            },
+            {
+                "type": "header",
+                "content": "Margin Bottom:"
+            },
+            {
+                "type": "range",
+                "id": "margin_bottom_mb",
+                "label": "Mobile",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "margin_bottom_tab",
+                "label": "Tablet",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "margin_bottom",
+                "label": "Desktop",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "default": 0
+            }, 
+			{
+                "type": "header",
+                "content": "Header"
+            },
+            {
+                "type": "text",
+                "id": "brand_title",
+                "label": "Title"
+            },
+			{
+                "type": "select",
+                "id": "title_style",
+                "label": "Title Style:",
+
+                "options": [
+                    {
+                        "value": "style_1",
+                        "label": "Style 1"
+                    },
+                    {
+                        "value": "style_2",
+                        "label": "Style 2"
+                    },
+                    {
+                        "value": "style_3",
+                        "label": "Style 3"
+                    }
+                ],
+                "default": "style_1"
+            },
+            {
+                "type": "checkbox",
+                "id": "display_padding",
+                "label": "Display padding between banner blocks",
+                "default": true
+            }           	
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name": "Image",
+                "settings": [		  	
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Title",
+                    "default" : "Editor’s Pick"
+                },
+                {
+                    "type" : "color",
+                    "id" : "color_title",
+                    "label" : "Title Color",
+                    "default" : "#fff"
+                },
+				{
+                    "type" : "text",
+                    "id" : "title-link-title",
+                    "label" : "Link Title",
+                    "default" : "Editor’s Pick"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link",
+                    "info": "Optional"
+                }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Sub Banner",
+                "category": "Block Images",
+                "blocks": [
+                    {
+                        "type": "image"
+                    },
+                    {
+                        "type": "image"
+                    },
+                    {
+                        "type": "image"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

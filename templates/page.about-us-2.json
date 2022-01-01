@@ -1,0 +1,93 @@
+{
+  "wrapper": "div.page-tpl.about-us-2",
+  "sections": {
+    "header": {
+      "type": "page-header",
+      "disabled": true,
+      "settings": {
+        "text_color": "",
+        "menu": "main-menu",
+        "menu_bar_background": "",
+        "menu_bar_border": "",
+        "menu_item_background": "",
+        "menu_item_text_color": "",
+        "menu_item_background_color_h": "",
+        "menu_item_text_color_h": ""
+      }
+    },
+    "main": {
+      "type": "about-us-2-content",
+      "blocks": {
+        "4eaa4f94-1d24-4be3-9d24-e5ecc13e757a": {
+          "type": "top_content",
+          "settings": {
+            "display_banner": true,
+            "banner": "shopify:\/\/shop_images\/receiving-shipping-box-on-ipad.jpg",
+            "alignment": "left",
+            "title_1": "About Equiport",
+            "content_1": "Equiport has proudly serviced our customers in various products which included industrial, agriculture, and construction business. We are proud to have a 100% Canadian-owned and operated business. We have had an excellent experience in the North American market since 2007.\n\nWe are committed to continuous improvement of our quality products that meet and exceed their needs and satisfy the applicable requirements, thereby providing our customers exceptional service and quality products. We deliver innovation, excellence, and quality in everything we offer.\n\nOur goals are to give you an unbeatable deal and support your quick and reliable service in North America.\n– Truly low prices\n– No gimmicks (no frills)\n– Bulk discount: we bring you to the business price level.\n– Always improve quality\n– Always listen to yourself and love what you do",
+            "title_2": "",
+            "content_2": "",
+            "title_3": "",
+            "content_3": "",
+            "title_4": "",
+            "content_4": "",
+            "title_5": "",
+            "content_5": ""
+          }
+        },
+        "d5fbc0ba-1c57-4de0-82a1-7fe3504ee447": {
+          "type": "bottom_content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_59efcbd9-2b6e-4086-a3e8-46dbc30d472d.png",
+            "title": "Jack",
+            "subtitle": "Co-Found | CEO",
+            "url": ""
+          }
+        },
+        "7fa35b44-218f-4c10-a97f-4ca044892d2f": {
+          "type": "bottom_content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_7d38aa88-19f4-4ddf-bc88-818c7b4485e6.png",
+            "title": "Amanda",
+            "subtitle": "Marketing",
+            "url": ""
+          }
+        },
+        "46360eef-cca6-4186-a0e6-8a6d19496500": {
+          "type": "bottom_content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_05ecaeac-6f34-40bd-bfd9-2259fd9e685c.png",
+            "title": "Matt",
+            "subtitle": "Technical",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "4eaa4f94-1d24-4be3-9d24-e5ecc13e757a",
+        "d5fbc0ba-1c57-4de0-82a1-7fe3504ee447",
+        "7fa35b44-218f-4c10-a97f-4ca044892d2f",
+        "46360eef-cca6-4186-a0e6-8a6d19496500"
+      ],
+      "settings": {
+        "display_top_content": true,
+        "top_heading": "About Us",
+        "top_subheading": "Equiport since 2007",
+        "border_color": "#a6a6a6",
+        "top_content_bgc": "#fafafa",
+        "top_content_tt_size": "30",
+        "top_content_ttc": "#232323",
+        "top_content_txtc": "#3c3c3c",
+        "dots_color": "#9c9c9c",
+        "display_bottom_content": false,
+        "bot_heading": "People Behind the scene",
+        "bot_subheading": "Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom."
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "cart_notes": false,
+        "secure_text": "Secure Shopping Guarantee.",
+        "cart_countdown_enable": false,
+        "time_countdown": 30,
+        "coupon_code_enable": false,
+        "coupon_title": "Coupon Code:",
+        "coupon_content": "Coupon code will be applied on the checkout page",
+        "gift_card_enable": false,
+        "product_to_use": "",
+        "gift_content": "",
+        "button_gift_text": "Add",
+        "show_cart_best_sellers_product": false,
+        "title": "Best Sellers",
+        "show_slider_featured_collection": "cosmopolis",
+        "slider_featured_limit_all": 16,
+        "collection_results_per_row1": "5"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
