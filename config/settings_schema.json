@@ -75,46 +75,6 @@
           {
             "value": "default",
             "label": "Header Default"
-          },
-          {
-            "value": "parallax",
-            "label": "Header 01"
-          },
-          {
-            "value": "02",
-            "label": "Header 02"
-          },
-          {
-            "value": "03",
-            "label": "Header 03"
-          },
-          {
-            "value": "04",
-            "label": "Header 04"
-          },
-          {
-            "value": "05",
-            "label": "Header 05"
-          },
-          {
-            "value": "06",
-            "label": "Header 06"
-          },
-          {
-            "value": "07",
-            "label": "Header 07"
-          },
-          {
-            "value": "08",
-            "label": "Header 08"
-          },
-          {
-            "value": "vertical",
-            "label": "Header 09"
-          },
-          {
-            "value": "supermarket",
-            "label": "Header 10"
           }
         ],
         "default": "default",
@@ -279,55 +239,6 @@
       {
         "type": "header",
         "content": "Footer Layout"
-      },
-      {
-        "type": "select",
-        "id": "footer_layout",
-        "label": "Footer Layout",
-        "options": [
-          {
-            "value": "default",
-            "label": "Footer Default"
-          },
-          {
-            "value": "parallax",
-            "label": "Footer 01"
-          },
-          {
-            "value": "02",
-            "label": "Footer 02"
-          },
-          {
-            "value": "03",
-            "label": "Footer 03"
-          },
-          {
-            "value": "04",
-            "label": "Footer 04"
-          },
-          {
-            "value": "05",
-            "label": "Footer 05"
-          },
-          {
-            "value": "06",
-            "label": "Footer 06"
-          },
-          {
-            "value": "07",
-            "label": "Footer 07"
-          },
-          {
-            "value": "08",
-            "label": "Footer 08"
-          },
-          {
-            "value": "09",
-            "label": "Footer 09"
-          }
-        ],
-        "default": "default",
-        "info": "Default: Footer Default"
       },
       {
         "type": "header",
