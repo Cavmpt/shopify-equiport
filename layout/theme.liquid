@@ -174,27 +174,7 @@
           {% endif %}    
         {% endif %}    
 
-        {% if settings.footer_layout == 'default' %}        
-        {% section 'footer' %}
-        {% elsif settings.footer_layout == 'parallax' %}
-        {% section 'footer-parallax' %}
-        {% elsif settings.footer_layout == '02' %}
-        {% section 'footer-2' %}
-        {% elsif settings.footer_layout == '03' %}
-        {% section 'footer-3' %}
-        {% elsif settings.footer_layout == '04' %}
         {% section 'footer-4' %}
-        {% elsif settings.footer_layout == '05' %}
-        {% section 'footer-5' %}
-        {% elsif settings.footer_layout == '06' %}
-        {% section 'footer-6' %}
-        {% elsif settings.footer_layout == '07' %}
-        {% section 'footer-7' %}
-        {% elsif settings.footer_layout == '08' %}
-        {% section 'footer-8' %}
-        {% elsif settings.footer_layout == '09' %}
-        {% section 'footer-9' %}
-        {% endif %}
         
         <div class="footbar-fixed {% if template contains 'product' %}footbar-fixed-product{% endif %}">
             {% section 'someone-purchased' %}
