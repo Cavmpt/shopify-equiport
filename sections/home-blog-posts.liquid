@@ -18,7 +18,7 @@
     {% endif %}
 
 <div class="home-blog-posts {{ class }}" id="home-blog-{{ section.id }}" data-loader-script="{{ 'halo.slide-blog.js' | asset_url }}">
-  <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
+  <div class="container">
     {% if section.settings.blog_post_title != blank %}
     <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
       <h3 class="box-title">
