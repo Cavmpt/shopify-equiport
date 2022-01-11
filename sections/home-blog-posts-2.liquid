@@ -8,7 +8,7 @@
 
 {% if section.settings.blog_posts != blank %}
 <div class="home-blog-posts home-blog-style2" id="home-blog-{{ section.id }}">
-    <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
+    <div class="container">
         <div class="content-blog">
             <div class="row list-blogs blog-grid disable-srollbar">
                 {%- assign blog = blogs[section.settings.blog_posts] -%}
