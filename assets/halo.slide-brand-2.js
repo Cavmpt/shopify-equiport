@@ -2,7 +2,6 @@
     var halo = {
         initBrandsSlider2: function() {
             var brandsSlider = $('[data-brands-slider-style2]');
-
             brandsSlider.each(function () {
                 var self = $(this);
                 var rows = parseInt($(this).data('brand-rows'));
