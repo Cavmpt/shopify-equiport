@@ -134,7 +134,7 @@
             if($('[data-menu-tab]').length) {
                 this._multiHomepage();
             }else {
-               //this.menu_ajax();
+               this.menu_ajax();
             }
             this.loaderScript();
 
