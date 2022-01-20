@@ -19,16 +19,16 @@
                     <div class="vertical-menu">
                         <div class="categories-title">
                             {% if section.settings.categories_title != blank %}
-                            <h3 class="title">
-                                {% render 'multilang' with section.settings.categories_title %}                               
-                            </h3> 
-                            {% endif %}
+                              <h3 class="title">
+                                  {% render 'multilang' with section.settings.categories_title %}                               
+                              </h3> 
+                              {% endif %}
 
-                            {% if section.settings.view_all != blank %}
-                            <a class="view_all" href="{{ section.settings.link_view_all }}" title="{{ section.settings.view_all }}">
-                                {% render 'multilang' with section.settings.view_all %}
-                            </a>
-                            {% endif %}
+                              {% if section.settings.view_all != blank %}
+                              <a class="view_all" href="{{ section.settings.link_view_all }}" title="{{ section.settings.view_all }}">
+                                  {% render 'multilang' with section.settings.view_all %}
+                              </a>
+                              {% endif %}
                         </div>
 
                         <nav class="nav-bar" role="navigation">
