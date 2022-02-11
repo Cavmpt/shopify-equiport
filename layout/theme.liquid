@@ -102,6 +102,10 @@
    {% render 'judgeme_core' %}
 {% include 'hulk_po_vd.liquid' %}{%- render 'asl_snippet' -%}
 {% assign nowts = "now" | date: "%s" %}{% assign metats = shop.metafields._ls_meta.check %}{% assign timediff = nowts | minus: metats %}{% if timediff < 604800 %}<script async="async" src="https://livesearch.okasconcepts.com/js/livesearch.init.min.js?v=2&shop=canada-bestland-industrial.myshopify.com"></script>{% endif %}
+<!-- In Store Pickup Local Delivery by Logbase - Starts -->
+                                        <script src='https://slots-app.logbase.io/slots-script-tag.js?shop=canada-bestland-industrial.myshopify.com' defer></script>
+                                        <script type="text/javascript" src="https://slots-app.logbase.io/datetime-slot-picker/datetime-slot-picker.js"></script>
+                                    <!-- In Store Pickup Local Delivery by Logbase - Ends -->
 </head>
 
     {% if settings.layout_body == 'full' %}    
